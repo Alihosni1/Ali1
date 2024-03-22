@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http'; // Assurez-vous d'impor
 import { AppComponent } from './app.component';
 import { MeteoComponent } from './meteo/meteo.component';
 import { MeteoService } from './services/meteo.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
 declarations: [
@@ -17,7 +18,7 @@ BrowserModule,
 FormsModule, // Ajoutez FormsModule aux imports
 HttpClientModule // Ajoutez HttpClientModule aux imports
 ],
-providers: [MeteoService],
+providers: [MeteoService, provideAnimationsAsync()],
 bootstrap: [AppComponent]
 })
 export class AppModule { }
